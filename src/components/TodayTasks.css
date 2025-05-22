@@ -1,0 +1,71 @@
+.today-tasks {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.today-tasks-title {
+    margin: 0 0 1rem 0;
+    color: #2563eb;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.today-tasks-icon {
+    font-size: 1.5rem;
+}
+
+.today-tasks-summary {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.today-tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.today-task-item {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f3f4f6;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+
+.today-task-duration {
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    margin-right: 0.3rem;
+    white-space: nowrap;
+}
+
+.today-task-category {
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    white-space: nowrap
+}
+
+.today-tasks-empty {
+    font-size: 0.9rem;
+    color: #666;
+}

@@ -1,0 +1,32 @@
+.App {
+    padding: 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.App h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1a365d;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.App h2 span {
+    font-size: 2.2rem;
+}
+
+.App ul {
+    list-style: none;
+    padding: 0;
+}
+
+.total-duration {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}

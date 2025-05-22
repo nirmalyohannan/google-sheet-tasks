@@ -1,17 +1,22 @@
-import { Task } from "../types/Task";
+import { Task } from '../types/Task';
+import './TaskCard.css';
 
-interface TaskCardProps {
+export interface TaskCardProps {
     task: Task;
 }
 
 export function TaskCard({ task }: TaskCardProps) {
     return (
-        <li style={{ marginBottom: "1rem", borderBottom: "1px solid #ddd", paddingBottom: "0.5rem" }}>
-            <strong>{task.task}</strong><br />
-            {/* Category */}
-            <h3 style={{ fontSize: "0.9rem", color: "#555" }}>{task.category}</h3>
-            📅 {task.date} | ⏱ {task.duration} min
-            <div style={{ fontSize: "0.9rem", marginTop: "0.3rem" }}>{task.description}</div>
+        <li className="task-card">
+            <div className="task-header">
+                <h3 className="task-title">{task.task}</h3>
+                <span className="task-category">{task.category}</span>
+            </div>
+            <div className="task-meta">
+                <span>📅 {task.date}</span>
+                <span>⏱ {task.duration} min</span>
+            </div>
+            <div className="task-description">{task.description}</div>
         </li>
     );
 }
