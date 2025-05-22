@@ -28,7 +28,17 @@ export function TodayTasks({ tasks }: TodayTasksProps) {
                     <ul className="today-tasks-list">
                         {todayTasks.map((task, index) => (
                             <li key={index} className="today-task-item">
-                                <div>• {task.task} <span className='today-task-item-badges'> <span className="today-task-duration">{task.duration} min</span> <span className="today-task-category">• {task.category}</span></span></div>
+                                <div className="today-task-item-content">• {task.task}
+                                    <span className='today-task-item-badges'>
+                                        <span className="today-task-duration">{task.duration} min</span>
+                                        <span className="today-task-category">• {task.category}</span>
+                                    </span>
+                                    {task.description && (
+                                        <div className="today-task-description">
+                                            {task.description}
+                                        </div>
+                                    )}
+                                </div>
                             </li>
                         ))}
                     </ul>
