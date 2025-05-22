@@ -21,7 +21,11 @@ class Task {
         duration: number,
         description: string
     ) {
-        this.date = date;
+        this.date = new Date(date).toLocaleDateString('en-GB', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric'
+        });
         this.task = task;
         this.category = category;
         this.duration = duration;
