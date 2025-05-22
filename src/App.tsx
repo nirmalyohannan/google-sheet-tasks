@@ -33,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="version-info">Version: 0.0.2</div>
       <h2>
         <span>📋</span>
         Task Viewer
