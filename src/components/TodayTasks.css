@@ -65,6 +65,10 @@
     white-space: nowrap
 }
 
+.today-task-item-badges {
+    white-space: nowrap;
+}
+
 .today-tasks-empty {
     font-size: 0.9rem;
     color: #666;

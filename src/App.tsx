@@ -8,6 +8,7 @@ import './components/CategorySelector.css';
 import './components/App.css';
 
 function App() {
+  const isInIframe = window !== window.parent;
   const [tasks, setTasks] = useState<Task[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [categories, setCategories] = useState<string[]>([]);
@@ -35,6 +36,22 @@ function App() {
       <h2>
         <span>📋</span>
         Task Viewer
+        {isInIframe && (
+          <button
+            onClick={() => window.open(window.location.href, '_blank')}
+            style={{
+              marginLeft: '1rem',
+              padding: '0.25rem 0.5rem',
+              fontSize: '0.8rem',
+              background: '#e2e8f0',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Open Fullscreen
+          </button>
+        )}
       </h2>
       <TodayTasks tasks={tasks} />
       <div style={{ marginBottom: '1rem' }}>
