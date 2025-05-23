@@ -54,29 +54,34 @@ function App() {
           </button>
         )}
       </h2>
-      <TodayTasks tasks={tasks} />
-      <div style={{ marginBottom: '1rem' }}>
-        <CategorySelector
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-        />
-        <div className="total-duration">
-          Total Duration: {tasks
-            .filter(task => selectedCategory === 'All' || task.category === selectedCategory)
-            .reduce((total, task) => total + task.duration, 0)} minutes
-        </div>
-      </div>
       {tasks.length === 0 ? (
-        <p>No tasks available.</p>
+        <div>
+          <p>No tasks available. The "data" parameter is missing in the URL.</p>
+          <p>Please refer to the <a href="https://github.com/nirmalyohannan/google-sheet-tasks#" target="_blank" rel="noopener noreferrer">documentation</a> for instructions on how to link this app with your Google Sheet.</p>
+        </div>
       ) : (
-        <ul style={{ listStyle: "none", padding: 0 }}>
-          {tasks
-            .filter(task => selectedCategory === 'All' || task.category === selectedCategory)
-            .map((task, index) => (
-              <TaskCard key={index} task={task} />
-            ))}
-        </ul>
+        <>
+          <TodayTasks tasks={tasks} />
+          <div style={{ marginBottom: '1rem' }}>
+            <CategorySelector
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onCategoryChange={setSelectedCategory}
+            />
+            <div className="total-duration">
+              Total Duration: {tasks
+                .filter(task => selectedCategory === 'All' || task.category === selectedCategory)
+                .reduce((total, task) => total + task.duration, 0)} minutes
+            </div>
+          </div>
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {tasks
+              .filter(task => selectedCategory === 'All' || task.category === selectedCategory)
+              .map((task, index) => (
+                <TaskCard key={index} task={task} />
+              ))}
+          </ul>
+        </>
       )}
     </div>
   );
