@@ -44,7 +44,7 @@ export function TodayTasks({ tasks }: TodayTasksProps) {
                     </ul>
                 </div>
             ) : (
-                <div className="today-tasks-empty">No tasks scheduled for today</div>
+                <div className="today-tasks-empty">No tasks completed today</div>
             )}
         </div>
     );
